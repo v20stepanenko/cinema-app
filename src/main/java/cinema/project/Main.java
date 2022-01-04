@@ -67,10 +67,9 @@ public class Main {
                 (AuthenticationService) injector.getInstance(AuthenticationService.class);
 
         authenticationService.register("user1", "pass1");
-        authenticationService.register("user2", "pass2");
-        User user1 = null;
+        User user = null;
         try {
-            user1 = authenticationService.login("user1", "pass1");
+            user = authenticationService.login("user1", "pass1");
         } catch (AuthenticationException exception) {
             System.out.println(exception);
         }
@@ -78,10 +77,10 @@ public class Main {
                 (ShoppingCartService) injector.getInstance(ShoppingCartService.class);
         OrderService orderService =
                 (OrderService) injector.getInstance(OrderService.class);
-        ShoppingCart user1ShoppingCart = shoppingCartService.getByUser(user1);
+        ShoppingCart user1ShoppingCart = shoppingCartService.getByUser(user);
         shoppingCartService.addSession(tomorrowMovieSession, user1ShoppingCart.getUser());
-        orderService.completeOrder(shoppingCartService.getByUser(user1));
-        List<Order> ordersHistory = orderService.getOrdersHistory(user1);
+        orderService.completeOrder(shoppingCartService.getByUser(user));
+        List<Order> ordersHistory = orderService.getOrdersHistory(user);
         System.out.println("*****************");
         System.out.println(ordersHistory);
     }
