@@ -3,13 +3,11 @@
 The application allows you to add movies, add new movie sessions and add cinema hall as admin. Register new customers, authorization and buy tickets. 
 
 ### List of endpoints:
-##### Without authentication
-
+##### Without authentication:
 ```POST: /login``` — login page
 ```POST: /register``` — registration page
 
 ##### For users and admins:
-
 ```GET: /cinema-halls``` — show all the cinema halls
 ```GET: /movies``` — show all movies
 ```GET: /movie-sessions/available``` — show all available movie sessions
@@ -19,7 +17,6 @@ The application allows you to add movies, add new movie sessions and add cinema 
 ```GET: /shopping-carts/by-user``` — show shopping cart contents of logged user 
 
 ##### For admins:
-
 ```GET: /users/by-email``` — find user by email
 ```POST: /cinema-halls```— add new cinema hall
 ```POST: /movies```— add new movie
