@@ -1,6 +1,6 @@
 # Cinema App Pet Project
 #### Describe
-The application allows you to add movies, add new movie sessions and add cinema hall as admin. Register new customers, authorization and buy tickets. 
+The application allows you to add movies, movie sessions and cinema halls, if you are admin, also, register new customers, authorization and buy tickets.
 
 ### List of endpoints:
 ##### Without authentication:
@@ -25,7 +25,7 @@ The application allows you to add movies, add new movie sessions and add cinema 
 ```DELETE: /movie-sessions/{id}```— delete movie session by id
 
 #### Technologies::
-1. Spring (MVC, Security)
+1. Spring (Core, MVC, Security)
 2. Hibernate
 3. MySQL
 4. Apache Tomcat
